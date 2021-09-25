@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_4"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_E5E5E5"
+            android:fontFamily="@font/kanit_medium"
+            android:paddingLeft="@dimen/dp_13"
+            android:paddingTop="@dimen/dp_13"
+            android:singleLine="false"
+            android:layout_weight="2"
+            android:text="@string/warranty_period"
+            android:textColor="@color/color_414141"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="normal" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_F5F5F5"
+            android:fontFamily="@font/kanit_light"
+            android:paddingLeft="@dimen/dp_14"
+            android:layout_weight="1"
+            android:paddingTop="@dimen/dp_13"
+            android:text="@string/content_of_warranty"
+            android:textColor="@color/color_414141"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="normal" />
+</LinearLayout>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="informationViewModel"
+            type="net.mindzone.robroo.ui.main.information.InformationViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <include
+            android:id="@+id/includeToolbar"
+            layout="@layout/view_custom_toolbar02"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    <androidx.core.widget.NestedScrollView
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/includeToolbar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:fillViewport="true"
+        android:layout_height="@dimen/dp_0">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/viewPager"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_250"
+                    android:src="@drawable/ic_placeholder_image"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:scaleType="fitXY"
+                    />
+
+                <include
+                    android:id="@+id/layoutTitle"
+                    layout="@layout/view_layout_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/viewPager" />
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/frameTabbar"
+                    app:layout_constraintBottom_toTopOf="@+id/viewPager2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layoutTitle"
+                    android:layout_height="wrap_content">
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_gravity="bottom"
+                        android:background="@color/color_FBFBFB" />
+                    <com.google.android.material.tabs.TabLayout
+                        app:tabMode="scrollable"
+                        app:tabGravity="fill"
+                        android:id="@+id/topNavigationView"
+                        android:textSize="@dimen/sp_14"
+                        android:layout_gravity="center"
+                        app:tabIndicatorFullWidth="false"
+                        app:tabSelectedTextColor="@color/color_414141"
+                        app:tabTextAppearance="@style/BottomNavigationView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/top_navigation_bar"
+                        app:tabIndicatorHeight="@dimen/dp_4"
+                        />
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/frameMain"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/frameTabbar" />
+                    <androidx.viewpager2.widget.ViewPager2
+                        android:id="@+id/viewPager2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_0"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/frameTabbar"
+                        app:itemIconTint="@android:color/white" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

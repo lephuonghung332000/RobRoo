@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+        <variable
+            name="homeViewModel"
+            type="net.mindzone.robroo.ui.main.notification.NotificationGeneralAndKnowledgeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/lauout_nodata"
+            layout="@layout/layout_nodata"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/rvListAll"
+            app:layout_constraintEnd_toEndOf="@+id/rvListAll"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <com.skydoves.androidveil.VeilRecyclerFrameView
+            android:id="@+id/rvListAll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:veilFrame_baseAlpha="0.6"
+            app:veilFrame_baseColor="@color/color_F5F5F5"
+            app:veilFrame_highlightAlpha="1.0"
+            app:veilFrame_highlightColor="@color/color_F3F3F3"
+            app:veilFrame_radius="@dimen/dp_0"
+            app:veilFrame_shimmerEnable="true"
+            app:veilFrame_veiled="true" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

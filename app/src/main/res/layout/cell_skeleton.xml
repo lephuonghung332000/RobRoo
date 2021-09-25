@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="@dimen/dp_20"
+    android:id="@+id/contrainlayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:background="@drawable/shape_videoview"
+        android:layout_width="@dimen/dp_136"
+        android:layout_height="@dimen/dp_105"
+        android:layout_alignBottom="@+id/linear"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/linear"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginEnd="@dimen/dp_16"
+        android:layout_toEndOf="@+id/imageView4"
+       android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        android:paddingTop="@dimen/dp_4"
+        android:paddingBottom="@dimen/dp_4"
+       >
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/dp_110"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Tile1"
+            android:textSize="@dimen/sp_14"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Tile1"
+            android:layout_marginTop="@dimen/dp_11"
+            android:textSize="@dimen/sp_14"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Tile1"
+            android:layout_marginTop="@dimen/dp_11"
+            android:textSize="@dimen/sp_14"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_11"
+            android:fontFamily="@font/kanit_medium"
+            android:text="Tile1"
+            android:textSize="@dimen/sp_14"
+            />
+    </LinearLayout>
+
+</RelativeLayout>

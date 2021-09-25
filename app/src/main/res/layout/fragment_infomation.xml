@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+        <variable
+            name="informationViewModel"
+            type="net.mindzone.robroo.ui.main.information.InformationViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:clickable="true"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/include"
+            layout="@layout/view_custom_toolbar01"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+            <com.skydoves.androidveil.VeilRecyclerFrameView
+                android:id="@+id/rvMenu2Home"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0"
+                app:veilFrame_veiled="true"
+                android:layout_marginTop="@dimen/dp_10"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/include"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:veilFrame_shimmerEnable="true"
+                app:veilFrame_baseColor="@color/color_F5F5F5"
+                app:veilFrame_highlightColor="@color/color_F3F3F3"
+                app:veilFrame_baseAlpha="0.6"
+                app:veilFrame_radius="@dimen/dp_0"
+                app:veilFrame_highlightAlpha="1.0" />
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

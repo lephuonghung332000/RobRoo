@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="notification"
+            type="net.mindzone.robroo.data.notification.entity.Notification" />
+        <variable
+            name="viewModel"
+            type="net.mindzone.robroo.ui.main.notification.NotificationGeneralAndKnowledgeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/itemLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_82">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_60"
+            android:background="@drawable/shape_videoview"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageView4"
+            app:layout_constraintTop_toTopOf="@+id/imageView4">
+
+            <TextView
+                android:id="@+id/tvCategory"
+                android:textColor="@color/color_414141"
+                android:textSize="@dimen/sp_14"
+                android:fontFamily="@font/kanit_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tvBody"
+                android:singleLine="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_light"
+                android:layout_marginRight="@dimen/dp_32"
+                android:textColor="@color/color_5A5A5A" />
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/textView15"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/sp_12"
+                    android:fontFamily="@font/kanit_light"
+                    android:textColor="@color/color_A5A5A5"
+                    android:layout_height="wrap_content"
+                    android:text="2 ชั่วโมงที่แล้ว"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/dp_16"
+                    android:textSize="@dimen/sp_12"
+                    android:textColor="@color/color_44BABA"
+                    android:fontFamily="@font/kanit_medium"
+                    android:text="2 ชั่วโมงที่แล้ว"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/dp_1"-->
+<!--            android:layout_marginLeft="@dimen/dp_16"-->
+<!--            android:layout_marginRight="@dimen/dp_16"-->
+<!--            android:background="@color/color_E5E5E5"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent" />-->
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

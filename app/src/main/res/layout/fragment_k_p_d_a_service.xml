@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+    </data>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <include
+            android:id="@+id/toolbar2"
+            layout="@layout/view_custom_toolbar02" />
+
+        <include
+            android:id="@+id/layout_nodata_kpda"
+            layout="@layout/layout_nodata"
+            android:visibility="gone" />
+        <com.skydoves.androidveil.VeilRecyclerFrameView
+            android:id="@+id/rvMenu2KPDA"
+            android:layout_marginTop="@dimen/dp_11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:veilFrame_veiled="true"
+            app:veilFrame_shimmerEnable="true"
+            app:veilFrame_baseColor="@color/color_F5F5F5"
+            app:veilFrame_highlightColor="@color/color_F3F3F3"
+            app:veilFrame_baseAlpha="0.6"
+            app:veilFrame_radius="@dimen/dp_0"
+            app:veilFrame_highlightAlpha="1.0" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+
+        <variable
+            name="informationViewModel"
+            type="net.mindzone.robroo.ui.main.information.InformationViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="match_parent"
+        tools:context=".ui.main.information.productInfo.ProductInfoFragment">
+
+        <include
+            android:id="@+id/layoutNoDataI8"
+            layout="@layout/layout_nodata"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <include
+            android:id="@+id/toolbar2"
+            layout="@layout/view_custom_toolbar02"></include>
+
+        <com.skydoves.androidveil.VeilRecyclerFrameView
+            android:id="@+id/rvMenu2ProductinfoWaranty"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:veilFrame_baseAlpha="0.6"
+            app:veilFrame_baseColor="@color/color_F5F5F5"
+            app:veilFrame_highlightAlpha="1.0"
+            app:veilFrame_highlightColor="@color/color_F3F3F3"
+            app:veilFrame_radius="@dimen/dp_0"
+            app:veilFrame_shimmerEnable="true"
+            app:veilFrame_veiled="true" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

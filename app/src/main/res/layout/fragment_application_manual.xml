@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data >
+        <variable
+            name="model"
+            type="net.mindzone.robroo.ui.main.generalMenu.faq.HomeSideMenuFaqViewModel" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/include2"
+            layout="@layout/view_custom_toolbar02" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvApplicationManual"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/include2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

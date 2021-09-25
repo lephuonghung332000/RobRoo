@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="comment"
+            type="net.mindzone.robroo.data.forumArticle.entity.comment.Comment" />
+
+        <variable
+            name="viewModel"
+            type="net.mindzone.robroo.ui.main.share.listShare.ShareViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/dp_16"
+        android:layout_marginTop="@dimen/dp_16"
+        android:background="@drawable/bg_border_edit_text_4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_4"
+                android:fontFamily="@font/kanit_medium"
+                android:text="@{viewModel.getCountComment()}"
+                android:textColor="@color/color_414141"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCommentLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:fontFamily="@font/kanit_light"
+                android:text="@{Integer.toString(comment.likes)}"
+                android:textColor="@color/color_5A5A5A"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgViewCommentLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:onClick="@{() -> viewModel.handleClickLikeComment(comment)}"
+                android:src="@{viewModel.checkLikedComment(comment) ? @drawable/ic_like:@drawable/ic_unlike}"
+                app:layout_constraintEnd_toStartOf="@id/tvCommentLike"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="UnusedAttribute" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCountComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:fontFamily="@font/kanit_light"
+                android:text="@{Integer.toString(comment.replies.size())}"
+                android:textColor="@color/color_5A5A5A"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintEnd_toStartOf="@id/imgViewCommentLike"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgViewCountComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_8"
+                app:layout_constraintEnd_toStartOf="@id/tvCountComment"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_message" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@color/color_E2E2E2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvComment" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginTop="@dimen/dp_16"
+                app:cardCornerRadius="@dimen/dp_20"
+                app:layout_constraintStart_toStartOf="@id/tvComment"
+                app:layout_constraintTop_toBottomOf="@id/view">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imgViewAvatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_avatars"
+                    app:srcCompat="@drawable/ic_launcher_background" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:fontFamily="@font/kanit_medium"
+                android:text="@{comment.author}"
+                android:textColor="@color/color_414141"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toEndOf="@id/cardView"
+                app:layout_constraintTop_toTopOf="@id/cardView" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageClock"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                app:layout_constraintStart_toStartOf="@id/tvName"
+                app:layout_constraintTop_toBottomOf="@id/tvName"
+                app:srcCompat="@drawable/ic_clock" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDateComment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="@dimen/dp_3"
+                android:fontFamily="@font/kanit_light"
+                android:text="@{comment.date}"
+                android:textColor="@color/color_44BABA"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toEndOf="@id/imageClock"
+                app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvReply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/kanit_medium"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:text="@string/reply"
+                android:textColor="@color/color_414141"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintBottom_toBottomOf="@id/tvDateComment"
+                app:layout_constraintStart_toEndOf="@id/tvDateComment"
+                app:layout_constraintTop_toTopOf="@id/tvDateComment"
+                tools:ignore="UnusedAttribute" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvContent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_8"
+                android:fontFamily="@font/kanit_light"
+                android:text="@{comment.text}"
+                android:textColor="@color/color_5A5A5A"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/cardView"
+                app:layout_constraintTop_toBottomOf="@id/cardView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:layout_marginHorizontal="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_8"
+            android:background="@color/color_E2E2E2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/constraintLayout" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCommentReply"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_24"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginBottom="@dimen/dp_65"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/constraintLayout"
+            app:layout_constraintHorizontal_bias="0.041"
+            app:layout_constraintStart_toStartOf="@id/constraintLayout"
+            app:layout_constraintTop_toBottomOf="@id/view1"
+            app:layout_constraintVertical_bias="0.0"
+            app:stackFromEnd="true"
+            tools:itemCount="2"
+            tools:listitem="@layout/cell_reply_comment_menu4" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/constraintLayout"
+            app:layout_constraintStart_toStartOf="@id/constraintLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etReplyComment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/dp_16"
+                android:layout_marginHorizontal="@dimen/dp_8"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@drawable/bg_border_edit_text_4dp"
+                android:fontFamily="@font/kanit_medium"
+                android:hint="@string/comment"
+                android:inputType="text"
+                android:paddingVertical="@dimen/dp_12"
+                android:paddingStart="12dp"
+                android:paddingEnd="@dimen/dp_16"
+                android:text="@={viewModel.textReplyComment}"
+                android:textColor="@color/color_A5A5A5"
+                android:textSize="@dimen/sp_14"
+                android:theme="@style/myTextInputLabel"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <View
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="@dimen/dp_44"
+                android:background="@color/color_F3F3F3"
+                app:layout_constraintBottom_toBottomOf="@id/etReplyComment"
+                app:layout_constraintEnd_toStartOf="@id/etSent0"
+                app:layout_constraintTop_toTopOf="@id/etReplyComment" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/etSent0"
+                android:layout_width="@dimen/dp_48"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/kanit_medium"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:onClick="@{() -> viewModel.onClickReplyComment(comment)}"
+                android:paddingVertical="@dimen/dp_12"
+                android:text="@string/sent"
+                android:textColor="@color/color_A5A5A5"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintBottom_toBottomOf="@id/etReplyComment"
+                app:layout_constraintEnd_toEndOf="@id/etReplyComment"
+                app:layout_constraintTop_toTopOf="@id/etReplyComment"
+                tools:ignore="UnusedAttribute" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

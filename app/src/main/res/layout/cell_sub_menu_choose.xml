@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="odd"
+            type="java.lang.Boolean" />
+
+        <variable
+            name="item"
+            type="net.mindzone.robroo.data.subMenu.entity.SubMenu" />
+
+        <variable
+            name="viewModel"
+            type="net.mindzone.robroo.ui.main.home.subMenuChoose.SubMenuChooseViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constrainLayoutItemView"
+        android:clickable="true"
+        android:onClick="@{() -> viewModel.onSubMenuClick(item)}"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:background="@{odd? @color/color_F5F5F5: @color/white}"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_70"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView"
+                android:layout_width="34dp"
+                android:layout_height="@dimen/dp_34"
+                app:cardCornerRadius="@dimen/dp_17"
+                android:layout_marginHorizontal="@dimen/dp_16"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageViewInfo"
+                    android:layout_width="@dimen/dp_34"
+                    android:layout_height="@dimen/dp_34"
+                    android:background="@color/color_E5E5E5"
+                    loadImage="@{item}"
+                    tools:src="@drawable/ic_2info"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_18"
+                android:layout_marginTop="@dimen/dp_14"
+                android:fontFamily="@font/kanit_medium"
+                android:text="@{item.titleth}"
+                android:textColor="@color/color_414141"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintStart_toEndOf="@id/cardView"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvInformation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/kanit_light"
+                android:text="@{item.type}"
+                android:textColor="@color/color_A5A5A5"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintStart_toStartOf="@id/tvProduct"
+                app:layout_constraintTop_toBottomOf="@id/tvProduct" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewCheck"
+                android:focusable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_18"
+                tools:src="@drawable/ic_selected"
+                android:src="@{item.selected? @drawable/ic_selected: @drawable/ic_blank_select}"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

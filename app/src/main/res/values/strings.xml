@@ -1,0 +1,237 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">RobRoo</string>
+    <string name="add_contact">Add Contact</string>
+    <string name="name">Name</string>
+    <string name="phone_number">Phone number</string>
+    <string name="save">Save</string>
+    <string name="saving_image_fail_msg">Couldn\'t save the image</string>
+    <string name="_5">5</string>
+
+    <string name="infomation_product">ข้อมูลสินค้า</string>
+    <string name="infomation_manual">คู่มือสินค้า</string>
+    <string name="infomation_waranty">ข้อมูลรับประกัน</string>
+    <string name="infomation_shared_device">อุปกรณ์ที่ใช้ร่วมกัน</string>
+    <string name="dowloaded">ดาวน์โหลดแล้ว</string>
+
+    <string name="tractor_peripherals">อุปกรณ์ต่อพ่วงแทรกเตอร์</string>
+
+
+    <string name="nodata">ไม่มีข้อมูล</string>
+    <string name="done">Done</string>
+    <string name="create_thread">สร้างกระทู้ของฉัน</string>
+    <string name="kpda">K-PAD</string>
+    <string name="maintenance_list">รายการบำรุงรักษา</string>
+    <string name="maintenance_hours">ชั่วโมงบำรุงรักษา</string>
+    <string name="check_the_coolant">ตรวจสอบน้ำหล่อเย็น</string>
+    <string name="every_50_hours">ทุกๆ 50 ชั่วโมง</string>
+    <string name="published">เผยแพร่ : 01-04-64</string>
+    <string name="title_1">Title 1</string>
+    <string name="content_drone">ฟินิกซ์สันทนาการดราม่์ ออกแบบ สันทนาการเอาท์</string>
+    <string name="l3008">L3008</string>
+    <string name="text_60">60</string>
+    <string name="minus">-</string>
+    <string name="text_620000">620,000</string>
+    <string name="text_price">ราคา</string>
+    <string name="more">เพิ่มเติม</string>
+    <string name="content_service">\t\t\tฟินิกซ์สันทนาการ ดราม่าครูเสดมะกันบาร์บี้เวสต์ ทาวน์เฮาส์แฟร์ ลิมูซีน เป่ายิ้งฉุบสกรัมต่อรองกัมมันตะ ออดิชั่นแรงผลักซีรีส์คาแรคเตอร์ แก๊สโซฮอล์ ละอ่อนเนิร์สเซอรี่สต๊อก ทีวี อุปการคุณเบนโลมาร์คเอ๋อัลไซเมอร์ อึ้มพุทธภูมิบอยคอตต์ ฮาโลวีน แจ๊สเวอร์ แคทวอล์คพีเรียดซิมธุหร่ำออกแบบ สันทนาการเอาท์ใช้งาน ฟินิกซ์สันทนาการ ดราม่าครูเสดมะกันบาร์บี้เวสต์ ทาวน์เฮาส์แฟร์ ลิมูซีน เป่ายิ้งฉุบสกรัมต่อรองกัมมันตะ ออดิชั่นแรงผลักซีรีส์คาแรคเตอร์ แก๊สโซฮอล์ \ละอ่อนเนิร์สเซอรี่สต๊อก ทีวี อุปการคุณเบนโลมาร์คเอ๋อัลไซเมอร์ อึ้มพุทธภูมิบอยคอตต์ ฮาโลวีน แจ๊สเวอร์ แคทวอล์คพีเรียดซิมธุหร่ำออกแบบ สันทนาการเอาท์ใช้งาน แพนดาเอสเปรสโซบร็อคโคลี ไฮแจ็คแชมพูน้องใหม่เที่ยงคืนแซ็ก คำสาปบู๊ ไฮไลท์คีตกวีจอหงวนแคมเปญแกสโซฮอล์ ป๊อปโอวัลตินแฮนด์ สุริยยาตรมวลชนทัวร์นาเมนท์ไวอะกร้า ไฟลท์ปอดแหกศิลปากรทับซ้อน ไอเดียเมาท์โกลด์สะบึมสหัสวรรษ แซ็กผู้นำเอสเพรสโซ คาราโอเกะเคลมไอติมซานตาคลอสแยมโรล เซอร์สกายภคันทลาพาธเทคโนแครต บูติกอาข่ามอนสเตอร์เอ๋อขั้นตอน ฟอร์ม ขั้นตอนลีกแคปปิโตรเคมีราสเบอร์รี งี้โกะโซนเซลส์ราเมน กรอบรูปคณาญาติรีสอร์ทแคร์ จอหงวนโคโยตี้สลัมฮอตดอก วิป ฮิปโปโปรชาร์จปฏิสัมพันธ์เป่ายิ้งฉุบ เช็งเม้งเอสเพรสโซ เป็นไงอันเดอร์สตรอเบอรี รีสอร์ทแพนงเชิญบราสต๊อค โปสเตอร์พันธุวิศวกรรมมินท์ลาเต้ รายชื่ออุปัทวเหตุบัสโรแมนติค เทเลกราฟบราคำตอบ บิ๊กดีกรี เฮอร์ริเคนหลินจือคอลัมนิสต์แฮนด์สมาพันธ์ มือถือ โดมิโนโอเวอร์นาฏยศาลา เซ็กซ์ เทค แซวแพทยสภา</string>
+    <string name="bath">บาท</string>
+    <string name="content_service_menu5">\t\t\t\t\tฟินิกซ์สันทนาการ ดราม่าครูเสดมะกันบาร์บี้เวสต์ ทาวน์เฮาส์แฟร์ ลิมูซีน เป่ายิ้งฉุบสกรัมต่อรองกัมมันตะ ออดิชั่นแรงผลักซีรีส์คาแรคเตอร์ แก๊สโซฮอล์ ละอ่อนเนิร์สเซอรี่สต๊อก ทีวี อุปการคุณเบนโลมาร์คเอ๋อัลไซเมอร์ อึ้มพุทธภูมิบอยคอตต์ ฮาโลวีน แจ๊สเวอร์ แคทวอล์คพีเรียดซิมธุหร่ำออกแบบ สันทนาการเอาท์ใช้งาน \n \t\t\t\t\t  ฟินิกซ์สันทนาการ ดราม่าครูเสดมะกันบาร์บี้เวสต์ ทาวน์เฮาส์แฟร์ ลิมูซีน เป่ายิ้งฉุบสกรัมต่อรองกัมมันตะ ออดิชั่นแรงผลักซีรีส์คาแรคเตอร์ แก๊สโซฮอล์ ละอ่อนเนิร์สเซอรี่สต๊อก ทีวี อุปการคุณเบนโลมาร์คเอ๋อัลไซเมอร์ อึ้มพุทธภูมิบอยคอตต์ ฮาโลวีน แจ๊สเวอร์ แคทวอล์คพีเรียดซิมธุหร่ำออกแบบ สันทนาการเอาท์ใช้งาน แพนดาเอสเปรสโซบร็อคโคลี ไฮแจ็คแชมพูน้องใหม่เที่ยงคืนแซ็ก คำสาปบู๊ ไฮไลท์คีตกวีจอหงวนแคมเปญแกสโซฮอล์ ป๊อปโอวัลตินแฮนด์ สุริยยาตรมวลชนทัวร์นาเมนท์ไวอะกร้า ไฟลท์ปอดแหกศิลปากรทับซ้อน ไอเดียเมาท์โกลด์สะบึมสหัสวรรษ แซ็กผู้นำเอสเพรสโซ คาราโอเกะเคลมไอติมซานตาคลอสแยมโรล เซอร์สกายภคันทลาพาธเทคโนแครต บูติกอาข่ามอนสเตอร์เอ๋อขั้นตอน ฟอร์ม ขั้นตอนลีกแคปปิโตรเคมีราสเบอร์รี งี้โกะโซนเซลส์ราเมน กรอบรูปคณาญาติรีสอร์ทแคร์ \n จอหงวนโคโยตี้สลัมฮอตดอก วิป ฮิปโปโปรชาร์จปฏิสัมพันธ์เป่ายิ้งฉุบ เช็งเม้งเอสเพรสโซ เป็นไงอันเดอร์สตรอเบอรี รีสอร์ทแพนงเชิญบราสต๊อค โปสเตอร์พันธุวิศวกรรมมินท์ลาเต้ รายชื่ออุปัทวเหตุบัสโรแมนติค เทเลกราฟบราคำตอบ บิ๊กดีกรี เฮอร์ริเคนหลินจือคอลัมนิสต์แฮนด์สมาพันธ์ มือถือ โดมิโนโอเวอร์นาฏยศาลา เซ็กซ์ เทค แซวแพทยสภา
+    </string>
+    <string name="uri">https://www.google.com</string>
+    <string name="tractor_model">แทรกเตอร์ - รุ่นแอล</string>
+    <string name="horse_power_uppercase">ขนาดแรงม้า</string>
+    <string name="horse_power_lowercase">แรงม้า</string>
+    <string name="menu_3">Menu 3\nงานบริการ</string>
+    <string name="repair_manual">คู่มือซ่อม</string>
+    <string name="thai_language">ภาษาไทย</string>
+    <string name="shared_device">อุปกรณ์ที่ใช้ร่วมกัน</string>
+    <string name="product_specification">สเปกสินค้า</string>
+    <string name="product_manual">คู่มือสินค้า</string>
+    <string name="drone_service">บริการโดรน</string>
+    <string name="rx_185">RX185</string>
+    <string name="dh_185">DH185</string>
+    <string name="dp_185">DP185</string>
+
+
+    <string name="show_latest_manual">แสดงคู่มือล่าสุด</string>
+    <string name="warranty_period">ระยะรับประกัน</string>
+    <string name="warranty_terms">เงื่อนไขรับประกัน</string>
+    <string name="yearonehalfmonth">1 ปี 6 เดือน</string>
+    <string name="start_of_warranty">การเริ่มต้นการ\nรับประกัน</string>
+    <string name="content_of_warranty">แบล็คเพทนาการพาสปอร์ตน็อกกรีน\n วอเตอร์แคทวอล์คอาร์พีจี แมกกาซีนออร์แกนแจ๊สอิเหนาเมจิก ทอร์นาโดยูวีฮวงจุ้ยโปรไง เยอบีร่า แพนด้าคองเกรสเพาเวอร์ แฟ็กซ์ป๋อหลอแฮนด์ ซีเนียร์แบ็กโฮเอ็นจีโอดิกชันนารี เอ็นทรานซ์มะกัน สโลว์ โคโยตีโหงวเอ็นจีโอ สคริปต์มาร์กพาร์ตเนอร์โมเดลแซ็ก โมเดลอึมครึมดีพาร์ทเมนต์ศิลปากรโปรโมท ปักขคณนาฟอยล์เมคอัพโคโยตี้ ฟิวเจอร์ครูเสดบัลลาสต์มาร์เก็ตปาสเตอร์ ดิกชันนารีเทเลกราฟแอร์</string>
+
+    <string name="detail_topic">หัวข้อรายละเอียด</string>
+    <string name="detail">รายละเอียด</string>
+    <string name="topic">หัวข้อกระทู้</string>
+
+    <string name="rx_spade"><b>RX</b>\nจอบหมุน</string>
+    <string name="dp_pioneer"><b>DP</b>\nผานบุกเบิก</string>
+    <string name="dh"><b>DH</b>\nผานพรวน</string>
+
+
+    <string name="contacts">Contacts</string>
+    <string name="string_domain">john.appleseed@domain.com</string>
+    <string name="string_user">สมชาย รอบรู้</string>
+    <string name="string_exp">0 / 100 EXP</string>
+    <string name="string_InfoProduct">ข้อมูลสินค้า</string>
+    <string name="categorySpinner">ประเภท</string>
+    <string name="languageSpinner">ภาษา</string>>
+    <string name="home_page">หน้าแรก</string>
+    <string name="information">ข้อมูล</string>
+    <string name="service">งานบริการ</string>
+    <string name="group">แบ่งปัน</string>
+    <string name="idea">ความรู้</string>
+    <string name="specificattion_table">ตารางบำรุงรักษา</string>
+
+    <plurals name="seconds_ago">
+        <item quantity="one">%1$d second ago</item>
+        <item quantity="other">%1$d seconds ago</item>
+    </plurals>
+
+    <plurals name="minutes_ago">
+        <item quantity="one">%1$d minute ago</item>
+        <item quantity="other">%1$d minutes ago</item>
+    </plurals>
+
+    <plurals name="hours_ago">
+        <item quantity="one">%1$d hour ago</item>
+        <item quantity="other">%1$d hours ago</item>
+    </plurals>
+
+    <plurals name="days_ago">
+        <item quantity="one">%1$d day ago</item>
+        <item quantity="other">%1$d days ago</item>
+    </plurals>
+
+    <plurals name="months_ago">
+        <item quantity="one">%1$d month ago</item>
+        <item quantity="other">%1$d months ago</item>
+    </plurals>
+
+    <plurals name="years_ago">
+        <item quantity="one">%1$d year ago</item>
+        <item quantity="other">%1$d years ago</item>
+    </plurals>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="addsubmenu">เพิ่มเมนูย่อย</string>
+    <string name="read_all">อ่านทั้งหมด</string>
+    <string name="flash_knowledge">Flash Knowledge</string>
+    <string name="agricultural_knowledge">ความรู้เกษตร</string>
+    <string name="tractor">แทรกเตอร์</string>
+    <string name="string_flash_knowledge">Flash Knowledge</string>
+    <string name="version">Version 1.0.1</string>
+    <string name="application_manual">คู่มือการใช้งานแอปพลิเคชัน</string>
+    <string name="setup">ตั้งค่า</string>
+    <string name="contact_the_system_administrator">ติดต่อผู้ดูแลระบบ</string>
+    <string name="log_out">ออกจากระบบ</string>
+
+    <!-- screen login  -->
+    <string name="just_now">Just now</string>
+    <string name="knowing">รอบรู้</string>
+    <string name="store_employee">พนักงานร้านผู้แทนจำหน่าย</string>
+    <string name="staff_skc">พนักงาน SKC</string>
+
+    <string name="login">เข้าสู่ระบบ</string>
+    <string name="user_name">ชื่อผู้ใช้</string>
+    <string name="forgot_password">ลืมรหัสผ่าน?</string>
+    <string name="confirm">ยืนยัน</string>
+    <string name="note_enter_email_forgot_password">กรุณากรอกอีเมลประจำตัวของบริษัทเพื่อกำหนดรหัสผ่านใหม่</string>
+
+    <string name="create_account">ยังไม่มีบัญชี?</string>
+    <string name="create_an_account">สร้างบัญชี</string>
+    <string name="first_name">ชื่อ (ภาษาไทย)</string>
+    <string name="last_name">นามสกุล (ภาษาไทย)</string>
+    <string name="birth">วัน/เดือน/ปีเกิด</string>
+    <string name="affiliated_shop">ร้านค้าที่สังกัดอยู่</string>
+    <string name="new_pass">รหัสผ่านใหม่</string>
+    <string name="confirm_new_pass">ยืนยันรหัสผ่านใหม่</string>
+    <string name="forgot_pass">ลืมรหัสผ่าน</string>
+    <string name="rest_pass">ตั้งรหัสผ่านใหม่</string>
+    <string name="pass_hint">******</string>
+    <string name="list_all">ทั้งหมด</string>
+    <string name="unread">ยังไม่อ่าน</string>
+    <string name="string_all_knowledge">ทั้งหมด</string>
+    <string name="string_unread_knowledge">ยังไม่อ่าน</string>
+    <string name="title">ชื่อกระทู้  อพาร์ทเมนท์เพนกวิน โซนบู๊ โค้กคาเฟ่ เป่ายิ้งฉุบละอ่อน มอคคา อยุติธรรมสเตอริโอซีอีโอ</string>
+    <string name="_01_04_64">เผยแพร่ : 01–04–64</string>
+    <string name="Use">การใช้งาน</string>
+    <string name="posted">"โพสท์แล้ว "</string>
+    <string name="thread_type">ประเภทกระทู้</string>
+    <string name="topic_content">เนื้อหากระทู้</string>
+    <string name="related_tags">แท็กที่เกี่ยวข้อง</string>
+
+    <string name="notification">การแจ้งเตือน</string>
+    <string name="email">E-mail</string>
+    <string name="number_phone">เบอร์โทรศัพท์</string>
+
+    <string name="like">ถูกใจ</string>
+    <string name="reviews">ความคิดเห็น</string>
+    <string name="comment">แสดงความคิดเห็น</string>
+    <string name="sent">ส่ง</string>
+    <string name="cancel">ยกเลิก</string>
+
+
+    <string name="string_latest_manual">คู่มือล่าสุด</string>
+    <string name="my_blogs">กระทู้ของฉัน</string>
+    <string name="comment_1">ความคิดเห็นที่ 1</string>
+    <string name="kaysorn_suksan">เกษร สุขสันต์</string>
+    <string name="reply">ตอบกลับ</string>
+
+    <string name="string_guide_type">ประเภทคู่มือ</string>
+    <string name="string_manual">คู่มือใช้</string>
+    <string name="string_hint">พิมพ์ที่นี่เพื่อค้นหา ‘รุ่นสินค้า’</string>
+
+    <string name="home_bottom_nav">หน้าแรก</string>
+    <string name="conten_sub_flash_knowledge">ฟินิกซ์สันทนาการ ดราม่าครูเสดมะกันบาร์บี้เวสต์ ทาวน์เฮาส์แฟร์ ลิมูซีน เป่ายิ้งฉุบสกรัมต่อรองกัมมันตะ ออดิชั่นแรงผลักซีรีส์คาแรคเตอร์ แก๊สโซฮอล์ ละอ่อนเนิร์สเซอรี่สต๊อก ทีวี อุปการคุณเบนโลมาร์คเอ๋อัลไซเมอร์ อึ้มพุทธภูมิบอยคอตต์ ฮาโลวีน แจ๊สเวอร์ แคทวอล์คพีเรียดซิมธุหร่ำออกแบบ สันทนาการเอาท์ใช้งาน</string>
+    <string name="tvnew">New</string>
+
+    <string name="notifications">การแจ้งเตือน</string>
+    <string name="general">ทั่วไป</string>
+    <string name="knowledge">ความรู้</string>
+
+    <string name="create_my_topic">สร้างกระทู้ของฉัน</string>
+    <string name="no_posts">ยังไม่มีกระทู้ของคุณ</string>
+    <string name="save_draft">บันทึกร่าง</string>
+    <string name="create_a_forum">สร้างกระทู้</string>
+    <string name="product_information">ข้อมูลสินค้า</string>
+    <string name="news_filter">ตัวกรองแสดงข่าว</string>
+    <string name="popular_opinion">หัวข้อที่มีความเห็นยอดนิยม</string>
+    <string name="frequently_asked_questions">คำถามที่พบบ่อย</string>
+    <string name="faq">FAQ</string>
+
+    <string name="choose_category">เลือกรุ่นสินค้า</string>
+    <string name="category">รุ่น</string>
+
+    <string-array name="category_array">
+        <item>ประเภท01</item>
+        <item>ประเภท02</item>
+        <item>ประเภท03</item>
+    </string-array>
+    <string-array name="language_array">
+        <item>ภาษา01</item>
+        <item>ภาษา02</item>
+        <item>ภาษา03</item>
+    </string-array>
+    <string-array name="productCategory_array">
+        <item>ทั้งหมด</item>
+    </string-array>
+
+
+    <string name="frequently_used_guide">คู่มือที่ใช้งานบ่อย</string>
+    <string name="filter_manual_product">ตัวกรองแสดงคู่มือสินค้า</string>
+    <string name="msg_no_network">Please connect to the internet</string>
+
+    <string name="contact_administrator">ติดต่อผู้ดูแลระบบ</string>
+
+    <string name="create_my_thread">สร้างกระทู้ของฉัน</string>
+    <string name="error_404">ERROR 404</string>
+
+    <string name="selected_item">Selected item:</string>
+    <string name="hello">สวัสดี!</string>
+    <string name="add_submenu_here">เพิ่มเมนูย่อยของคุณได้ที่นี่</string>
+    <string name="version_1_0_1">Version 1.0.1</string>
+    <string name="recent_topics">หัวข้อล่าสุด</string>
+    <string name="insert_image">แทรกรูปภาพ</string>
+
+</resources>

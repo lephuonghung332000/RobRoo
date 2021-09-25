@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="fragmentViewModel"
+            type="net.mindzone.robroo.ui.main.share.listShare.ShareViewModel" />
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/includeCustomToolbar02"
+            layout="@layout/view_custom_toolbar02" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_55"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="@id/includeCustomToolbar02"
+            app:layout_constraintStart_toStartOf="@id/includeCustomToolbar02"
+            app:layout_constraintTop_toBottomOf="@id/includeCustomToolbar02">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvThreadType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/dp_16"
+                    android:fontFamily="@font/kanit_medium"
+                    android:text="@string/thread_type"
+                    android:textColor="@color/color_414141"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <TextView
+                    android:id="@+id/tvCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textSize="@dimen/sp_14"
+                    android:fontFamily="@font/kanit_medium"
+                    android:paddingLeft="@dimen/dp_16"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/color_414141"
+                    android:background="@drawable/bg_border_edit_text_4dp"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@id/tvThreadType"
+                    app:layout_constraintTop_toBottomOf="@id/tvThreadType" />
+
+                <TextView
+                    android:id="@+id/tvTopic"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:fontFamily="@font/kanit_medium"
+                    android:text="@string/topic"
+                    android:textColor="@color/color_414141"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toStartOf="@id/tvThreadType"
+                    app:layout_constraintTop_toBottomOf="@id/tvCategory" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:background="@drawable/bg_border_edit_text_4dp"
+                    android:fontFamily="@font/kanit_medium"
+                    android:inputType="text"
+                    android:paddingHorizontal="@dimen/dp_8"
+                    android:text="@={fragmentViewModel.title}"
+                    android:textColor="@color/color_414141"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvThreadType"
+                    app:layout_constraintTop_toBottomOf="@id/tvTopic" />
+
+                <TextView
+                    android:id="@+id/tvTopicContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:fontFamily="@font/kanit_medium"
+                    android:text="@string/topic_content"
+                    android:textColor="@color/color_414141"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toStartOf="@id/tvThreadType"
+                    app:layout_constraintTop_toBottomOf="@id/etTitle" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etText"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_270"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:background="@drawable/bg_border_edit_text_4dp"
+                    android:fontFamily="@font/kanit_medium"
+                    android:gravity="start"
+                    android:overScrollMode="always"
+                    android:scrollbarStyle="insideInset"
+                    android:scrollbars="vertical"
+                    android:inputType="textMultiLine"
+                    android:padding="@dimen/dp_8"
+                    android:paddingHorizontal="@dimen/dp_8"
+                    android:text="@={fragmentViewModel.text}"
+                    android:textColor="@color/color_414141"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvThreadType"
+                    app:layout_constraintTop_toBottomOf="@id/tvTopicContent" />
+
+                <TextView
+                    android:id="@+id/tvInsertPicture"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:fontFamily="@font/kanit_medium"
+                    android:text="@string/insert_image"
+                    android:textColor="@color/color_414141"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toStartOf="@id/tvThreadType"
+                    app:layout_constraintTop_toBottomOf="@id/etText" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvInsertPicture"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintStart_toStartOf="@id/tvThreadType"
+                    app:layout_constraintTop_toBottomOf="@id/tvInsertPicture"
+                    tools:itemCount="4" />
+
+                <TextView
+                    android:id="@+id/tvRelatedTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:fontFamily="@font/kanit_medium"
+                    android:text="@string/related_tags"
+                    android:textColor="@color/color_414141"
+                    android:textSize="@dimen/sp_14"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintStart_toStartOf="@id/tvThreadType"
+                    app:layout_constraintTop_toBottomOf="@id/rvInsertPicture" />
+
+                <co.lujun.androidtagview.TagContainerLayout
+                    android:id="@+id/listTagview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/dp_12"
+                    android:paddingStart="@dimen/dp_16"
+                    android:paddingEnd="@dimen/dp_10"
+                    app:container_background_color="@color/white"
+                    app:container_border_radius="@dimen/dp_0"
+                    app:container_border_width="@dimen/dp_0"
+                    app:container_enable_drag="false"
+                    app:horizontal_interval="@dimen/dp_16"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvRelatedTag"
+                    app:tag_background_color="@color/color_9FD2D2"
+                    app:tag_border_color="@color/white"
+                    app:tag_border_width="@dimen/dp_0"
+                    app:tag_clickable="true"
+                    app:tag_corner_radius="@dimen/dp_20"
+                    app:tag_horizontal_padding="@dimen/dp_20"
+                    app:tag_selectable="true"
+                    app:tag_text_color="@color/white"
+                    app:tag_theme="none"
+                    app:tag_vertical_padding="@dimen/dp_12"
+                    app:vertical_interval="@dimen/dp_16" />
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:background="@color/color_F3F3F3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/listTagview" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_56"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layout_marginVertical="@dimen/dp_32"
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/tvRelatedTag"
+                    app:layout_constraintTop_toBottomOf="@id/view3">
+
+
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btCreateForum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_rectangle_radius_4dp"
+                        android:backgroundTint="@color/colorMain"
+                        android:fontFamily="@font/kanit_medium"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:text="@string/create_a_forum"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_14"
+                        app:deBouncedOnClick="@{() -> fragmentViewModel.isButtonCreateForumArticleClick()}"
+                        tools:ignore="UnusedAttribute" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/test"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="todo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

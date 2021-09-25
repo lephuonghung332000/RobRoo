@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="serviceViewModel"
+            type="net.mindzone.robroo.ui.main.service.ServiceViewModel" />
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <include
+            android:id="@+id/include"
+            layout="@layout/view_custom_toolbar01" />
+        <include
+            android:id="@+id/layout_nodata_service"
+            layout="@layout/layout_nodata"
+            android:visibility="gone" />
+            <com.skydoves.androidveil.VeilRecyclerFrameView
+                android:id="@+id/veilRecyclerViewService"
+                android:layout_marginTop="@dimen/dp_11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:veilFrame_veiled="true"
+                app:veilFrame_shimmerEnable="true"
+                app:veilFrame_baseColor="@color/color_F5F5F5"
+                app:veilFrame_highlightColor="@color/color_F3F3F3"
+                app:veilFrame_baseAlpha="0.6"
+                app:veilFrame_radius="@dimen/dp_0"
+                app:veilFrame_highlightAlpha="1.0" />
+
+
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "497351979478",
+    "project_id": "kubotarobroo",
+    "storage_bucket": "kubotarobroo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:497351979478:android:0feced839d9840867b7477",
+        "android_client_info": {
+          "package_name": "net.mindzone.robroo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "497351979478-gksnpjtm4a0q7bv2c9mb9qaolpkhpk16.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBMEJ-L1BAmJx6ycMHuymLzNwAzlojCK4Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "497351979478-gksnpjtm4a0q7bv2c9mb9qaolpkhpk16.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "497351979478-f3go0vsnk14cti9qt4g9hknj5j5rdu1c.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "net.mindzone.RobRoo"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

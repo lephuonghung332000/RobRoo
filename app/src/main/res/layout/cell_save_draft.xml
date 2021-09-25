@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="net.mindzone.robroo.ui.main.share.listShare.ShareViewModel" />
+
+        <variable
+            name="forumArticleSaveDraft"
+            type="net.mindzone.robroo.data.forumArticle.entity.forumArticle.ForumArticleSaveDraft" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_120"
+        android:layout_marginBottom="@dimen/dp_16"
+        android:clickable="true"
+        android:focusable="true"
+        app:cardElevation="@dimen/dp_0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewVideo"
+                android:layout_width="@dimen/dp_135"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_rectangle_radius_4dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:fontFamily="@font/kanit_medium"
+                android:maxWidth="@dimen/dp_240"
+                android:maxLines="3"
+                android:singleLine="false"
+                android:text="@{forumArticleSaveDraft.title}"
+                android:textColor="@color/color_414141"
+                android:textSize="@dimen/sp_14"
+                app:layout_constraintLeft_toRightOf="@id/imageViewVideo"
+                app:layout_constraintStart_toEndOf="@id/imageViewVideo"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:fontFamily="@font/kanit_light"
+                android:text="@{forumArticleSaveDraft.date}"
+                android:textColor="@color/color_5A5A5A"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintBottom_toTopOf="@id/listTagview"
+                app:layout_constraintStart_toStartOf="@id/tvCategory" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewWatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_8"
+                app:layout_constraintBottom_toBottomOf="@id/tvDate"
+                app:layout_constraintEnd_toStartOf="@id/textViewWatch"
+                app:layout_constraintTop_toTopOf="@id/tvDate"
+                app:srcCompat="@drawable/ic_view" />
+
+            <TextView
+                android:id="@+id/textViewWatch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_2"
+                android:fontFamily="@font/kanit_light"
+                android:text="@{Integer.toString(forumArticleSaveDraft.viewCount)}"
+                android:textColor="@color/color_5A5A5A"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintBottom_toBottomOf="@id/tvDate"
+                app:layout_constraintEnd_toStartOf="@id/imageViewMessage"
+                app:layout_constraintTop_toTopOf="@id/tvDate" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageViewMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_8"
+                android:src="@drawable/ic_message"
+                app:layout_constraintBottom_toBottomOf="@id/tvDate"
+                app:layout_constraintEnd_toStartOf="@id/textViewMessage"
+                app:layout_constraintTop_toTopOf="@id/tvDate" />
+
+            <TextView
+                android:id="@+id/textViewMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/dp_4"
+                android:layout_marginBottom="@dimen/dp_2"
+                android:fontFamily="@font/kanit_light"
+                android:text="@{Integer.toString(forumArticleSaveDraft.commentCount)}"
+                android:textColor="@color/color_5A5A5A"
+                android:textSize="@dimen/sp_12"
+                app:layout_constraintBottom_toBottomOf="@id/tvDate"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tvDate" />
+
+            <co.lujun.androidtagview.TagContainerLayout
+                android:id="@+id/listTagview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_150"
+                android:paddingTop="@dimen/dp_8"
+                app:container_background_color="@color/transparent"
+                app:container_border_color="@color/transparent"
+                app:container_border_radius="@dimen/dp_0"
+                app:container_border_width="@dimen/dp_0"
+                app:container_enable_drag="false"
+                app:layout_constraintBottom_toBottomOf="@id/imageViewVideo"
+                app:layout_constraintStart_toStartOf="@id/tvCategory"
+                app:tag_background_color="@color/color_00A8A9"
+                app:tag_border_color="@color/white"
+                app:tag_border_width="@dimen/dp_0"
+                app:tag_clickable="true"
+                app:tag_corner_radius="@dimen/dp_9"
+                app:tag_horizontal_padding="@dimen/dp_10"
+                app:tag_selectable="true"
+                app:tag_text_color="@color/white"
+                app:tag_text_size="@dimen/sp_11"
+                app:tag_theme="none"
+                app:tag_vertical_padding="@dimen/dp_3" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</layout>

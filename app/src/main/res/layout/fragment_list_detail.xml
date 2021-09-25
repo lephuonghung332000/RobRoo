@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="fragmentViewModel"
+            type="net.mindzone.robroo.ui.main.share.listShare.ShareViewModel" />
+
+        <variable
+            name="forumArticle"
+            type="net.mindzone.robroo.data.forumArticle.entity.forumArticle.ForumArticle" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true">
+
+        <include
+            android:id="@+id/includeCustomToolbar02"
+            layout="@layout/view_custom_toolbar02"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+        <include android:id="@+id/layoutNoData"
+            android:visibility="gone"
+            layout="@layout/layout_error"/>
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScrollView"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_55"
+            android:background="@color/white"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/includeCustomToolbar02">
+
+            <com.skydoves.androidveil.VeilLayout
+                android:id="@+id/veilLayout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0"
+                android:background="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/include2"
+                app:veilLayout_baseAlpha="0.6"
+                app:veilLayout_baseColor="@color/color_F5F5F5"
+                app:veilLayout_highlightAlpha="1.0"
+                app:veilLayout_highlightColor="@color/color_F3F3F3"
+                app:veilLayout_shimmerEnable="true"
+                app:veilLayout_veiled="false">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/viewPagerSlide"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_222"
+                    android:background="@drawable/image_default"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.afollestad.viewpagerdots.DotsIndicator
+                    android:id="@+id/dotsIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_10"
+                    android:layout_marginBottom="@dimen/dp_15"
+                    app:dot_drawable="@drawable/custom_circle"
+                    app:layout_constraintBottom_toBottomOf="@id/viewPagerSlide"
+                    app:layout_constraintEnd_toEndOf="@id/viewPagerSlide"
+                    app:layout_constraintStart_toStartOf="@id/viewPagerSlide" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:fontFamily="@font/kanit_medium"
+                    android:text="@{forumArticle.title}"
+                    android:textColor="@color/color_414141"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/viewPagerSlide" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:fontFamily="@font/kanit_light"
+                    android:text="@{forumArticle.date}"
+                    android:textColor="@color/color_A5A5A5"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintEnd_toEndOf="@id/tvCategory"
+                    app:layout_constraintStart_toStartOf="@id/tvCategory"
+                    app:layout_constraintTop_toBottomOf="@id/tvCategory" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageViewWatch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:layout_marginBottom="@dimen/dp_2"
+                    app:layout_constraintBottom_toBottomOf="@id/tvDate"
+                    app:layout_constraintEnd_toStartOf="@id/textViewWatch"
+                    app:layout_constraintTop_toTopOf="@id/tvDate"
+                    app:srcCompat="@drawable/ic_view" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewWatch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:layout_marginBottom="@dimen/dp_2"
+                    android:fontFamily="@font/kanit_light"
+                    android:text="@{Integer.toString(forumArticle.viewCount)}"
+                    android:textColor="@color/color_5A5A5A"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintBottom_toBottomOf="@id/tvDate"
+                    app:layout_constraintEnd_toStartOf="@id/imageViewMessage"
+                    app:layout_constraintTop_toTopOf="@id/tvDate" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageViewMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:src="@drawable/ic_message"
+                    app:layout_constraintBottom_toBottomOf="@id/tvDate"
+                    app:layout_constraintEnd_toStartOf="@id/textViewMessage"
+                    app:layout_constraintTop_toTopOf="@id/tvDate" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:layout_marginBottom="@dimen/dp_2"
+                    android:fontFamily="@font/kanit_light"
+                    android:text="@{Integer.toString(forumArticle.commentCount)}"
+                    android:textColor="@color/color_5A5A5A"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintBottom_toBottomOf="@id/tvDate"
+                    app:layout_constraintEnd_toStartOf="@id/imageViewLike"
+                    app:layout_constraintTop_toTopOf="@id/tvDate" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/imageViewLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:onClick="@{() -> fragmentViewModel.handleClickLikeForumArticle(forumArticle)}"
+                    android:src="@{fragmentViewModel.toggleIconLike ? @drawable/ic_like:@drawable/ic_unlike}"
+                    app:layout_constraintBottom_toBottomOf="@id/tvDate"
+                    app:layout_constraintEnd_toStartOf="@id/textViewLike"
+                    app:layout_constraintTop_toTopOf="@id/tvDate" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewLike"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_2"
+                    android:fontFamily="@font/kanit_light"
+                    android:text="@={fragmentViewModel.tvLikeForumArticle}"
+                    android:textColor="@color/color_5A5A5A"
+                    android:textSize="@dimen/sp_12"
+                    app:layout_constraintBottom_toBottomOf="@id/tvDate"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tvDate" />
+
+                <View
+                    android:id="@+id/view0"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="@color/color_F3F3F3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tvDate" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:fontFamily="@font/kanit_light"
+                    android:text="@{forumArticle.desc}"
+                    android:textColor="@color/color_5A5A5A"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintEnd_toEndOf="@id/tvDate"
+                    app:layout_constraintStart_toStartOf="@id/tvDate"
+                    app:layout_constraintTop_toBottomOf="@id/view0" />
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_1"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:background="@color/color_F3F3F3"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/textViewContent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewRelatedTags"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_12"
+                    android:fontFamily="@font/kanit_medium"
+                    android:text="@string/related_tags"
+                    android:textColor="@color/color_414141"
+                    android:textSize="@dimen/sp_14"
+                    app:layout_constraintStart_toStartOf="@id/tvDate"
+                    app:layout_constraintTop_toBottomOf="@id/view3" />
+
+                <co.lujun.androidtagview.TagContainerLayout
+                    android:id="@+id/listTagview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/dp_12"
+                    android:paddingStart="@dimen/dp_16"
+                    android:paddingEnd="@dimen/dp_10"
+                    app:container_background_color="@color/white"
+                    app:container_border_radius="@dimen/dp_0"
+                    app:container_border_width="@dimen/dp_0"
+                    app:container_enable_drag="false"
+                    app:horizontal_interval="@dimen/dp_16"
+                    app:layout_constraintStart_toStartOf="@id/tvDate"
+                    app:layout_constraintTop_toBottomOf="@id/textViewRelatedTags"
+                    app:tag_background_color="@color/color_00A8A9"
+                    app:tag_border_width="@dimen/dp_0"
+                    app:tag_clickable="true"
+                    app:tag_corner_radius="@dimen/dp_12"
+                    app:tag_horizontal_padding="@dimen/dp_14"
+                    app:tag_selectable="true"
+                    app:tag_text_color="@color/white"
+                    app:tag_text_size="@dimen/sp_12"
+                    app:tag_theme="none"
+                    app:tag_vertical_padding="@dimen/dp_5"
+                    app:vertical_interval="@dimen/dp_9" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/etLayoutComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_72"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:background="@color/color_00A8A9"
+                    app:layout_constraintTop_toBottomOf="@id/listTagview"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etComment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="@dimen/dp_16"
+                        android:background="@drawable/bg_border_edit_text_4dp"
+                        android:fontFamily="@font/kanit_medium"
+                        android:hint="@string/comment"
+                        android:inputType="text"
+                        android:paddingVertical="12dp"
+                        android:paddingStart="@dimen/dp_12"
+                        android:paddingEnd="@dimen/dp_24"
+                        android:text="@={fragmentViewModel.textComment}"
+                        android:textColor="@color/color_A5A5A5"
+                        android:textSize="@dimen/sp_14"
+                        android:theme="@style/myTextInputLabel"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:layout_width="@dimen/dp_1"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="@dimen/dp_14"
+                        android:background="@color/color_F3F3F3"
+                        app:layout_constraintEnd_toStartOf="@id/etSent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/etSent"
+                        android:layout_width="@dimen/dp_48"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="@dimen/dp_12"
+                        android:fontFamily="@font/kanit_medium"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:text="@string/sent"
+                        android:textColor="@color/color_414141"
+                        android:textSize="@dimen/sp_14"
+                        app:layout_constraintBottom_toBottomOf="@id/etComment"
+                        app:layout_constraintEnd_toEndOf="@+id/etComment"
+                        app:layout_constraintTop_toTopOf="@id/etComment"
+                        tools:ignore="UnusedAttribute" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvComments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingVertical="@dimen/dp_16"
+                    app:layoutManager="LinearLayoutManager"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/etLayoutComment"
+                    tools:itemCount="0"
+                    tools:listitem="@layout/cell_comment_menu4" />
+
+                <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible"
+                    android:id="@+id/loading"
+                    app:layout_constraintBottom_toBottomOf="@+id/rvComments"
+                    app:layout_constraintEnd_toEndOf="@+id/rvComments"
+                    app:layout_constraintStart_toStartOf="@+id/rvComments"
+                    app:layout_constraintTop_toTopOf="@+id/rvComments" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.skydoves.androidveil.VeilLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

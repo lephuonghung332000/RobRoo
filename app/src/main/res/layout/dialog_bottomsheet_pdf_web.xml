@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/layout_bottomPdf"
+    android:visibility="visible"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_rounded_corner"
+        android:focusable="true"
+        android:gravity="center"
+        android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvChoosePdf"
+                android:text="ดาวน์โหลด PDF"
+                android:fontFamily="@font/kanit_regular"
+                android:layout_width="match_parent"
+                android:paddingTop="@dimen/dp_15"
+                android:paddingBottom="@dimen/dp_15"
+                android:textAlignment="center"
+                android:paddingLeft="@dimen/dp_80"
+                android:paddingRight="@dimen/dp_80"
+                android:foreground="?attr/selectableItemBackground"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="#1E82FF"
+                android:textSize="@dimen/sp_20" />
+            <View
+                android:id="@+id/viewHoz"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="@color/color_E5E5E5"
+                />
+            <TextView
+                android:paddingTop="@dimen/dp_15"
+                android:id="@+id/tvChooseWeb"
+                android:text="อ่านออนไลน์"
+                android:layout_width="match_parent"
+                android:paddingLeft="@dimen/dp_80"
+                android:paddingRight="@dimen/dp_80"
+                android:foreground="?attr/selectableItemBackground"
+                android:paddingBottom="@dimen/dp_15"
+                android:fontFamily="@font/kanit_regular"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:textColor="#1E82FF"
+                android:textSize="@dimen/sp_20" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/btnCancelBottomsheetPdf"
+        android:layout_height="@dimen/dp_55"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_rounded_corner"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackground"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/btnCancelBottomsheet"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/cancel"
+            android:fontFamily="@font/kanit_bold"
+            android:textColor="@color/color_2680EB"
+            android:textSize="@dimen/sp_20" />
+    </LinearLayout>
+</LinearLayout>

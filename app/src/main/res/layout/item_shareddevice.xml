@@ -1,0 +1,60 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="@dimen/dp_4"
+    android:orientation="horizontal"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+        android:id="@+id/txtModelPrefix"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_E5E5E5"
+        android:fontFamily="@font/kanit_medium"
+        android:paddingLeft="@dimen/dp_13"
+        android:paddingTop="@dimen/dp_13"
+        android:singleLine="false"
+        android:layout_weight="2"
+        android:text="@string/rx_spade"
+        android:textColor="@color/color_414141"
+        android:textSize="@dimen/sp_14"
+        android:textStyle="normal" />
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <co.lujun.androidtagview.TagContainerLayout
+            android:id="@+id/tagLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dp_0"
+            android:paddingLeft="@dimen/dp_14"
+            android:paddingTop="@dimen/dp_13"
+            android:paddingBottom="@dimen/dp_16"
+            app:container_background_color="@color/color_F5F5F5"
+            app:tag_background_color="@color/colorBigText"
+            app:tag_border_color="@color/transparent"
+            app:tag_corner_radius="@dimen/dp_13"
+            app:horizontal_interval="@dimen/dp_9"
+            app:vertical_interval="@dimen/dp_16"
+            app:container_enable_drag="false"
+            app:tag_clickable="true"
+            app:tag_text_color="@color/white"
+            app:tag_text_size="@dimen/sp_12"
+            app:tag_theme="none"
+            app:container_border_radius	="@dimen/dp_0"
+            app:container_border_color="@color/transparent"
+            app:tag_ripple_color="@color/color_F5F5F5"
+            />
+
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/recyclerChildSharedDevice"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:background="@color/color_F5F5F5"-->
+<!--            android:fontFamily="@font/kanit_light"-->
+<!--            android:paddingLeft="@dimen/dp_14"-->
+<!--            android:paddingTop="@dimen/dp_13" />-->
+    </LinearLayout>
+</LinearLayout>

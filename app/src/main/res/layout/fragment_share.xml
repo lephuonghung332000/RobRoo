@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="fragmentViewModel"
+            type="net.mindzone.robroo.ui.main.share.listShare.ShareViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:focusable="true">
+
+        <include
+            android:id="@+id/includeCustomToolbar02"
+            layout="@layout/view_custom_toolbar02" />
+
+        <LinearLayout
+            android:id="@+id/linearLayoutShare"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/color_F5F5F5"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/includeCustomToolbar02">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvListAll"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@{fragmentViewModel.toggleButtonFragmentShare ? @color/color_00A8A9: @color/color_E6E6E6}"
+                android:fontFamily="@font/kanit_medium"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:onClick="@{() -> fragmentViewModel.toggleListAllAndMyBlog(true)}"
+                android:padding="@dimen/dp_16"
+                android:text="@string/list_all"
+                android:textColor="@{fragmentViewModel.toggleButtonFragmentShare ? @color/white : @color/color_808080}"
+                android:textSize="@dimen/sp_14"
+                tools:ignore="UnusedAttribute" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tvMyBlog"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@{fragmentViewModel.toggleButtonFragmentShare ? @color/color_E6E6E6:@color/color_00A8A9}"
+                android:fontFamily="@font/kanit_medium"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:gravity="center"
+                android:onClick="@{() -> fragmentViewModel.toggleListAllAndMyBlog(false)}"
+                android:padding="@dimen/dp_16"
+                android:text="@string/my_blogs"
+                android:textColor="@{fragmentViewModel.toggleButtonFragmentShare ? @color/color_808080:@color/white}"
+                android:textSize="@dimen/sp_14"
+                tools:ignore="UnusedAttribute" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCountNewPost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dp_32"
+            android:background="@drawable/bg_count_new_post"
+            android:fontFamily="@font/kanit_medium"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/dp_8"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            android:textSize="@dimen/sp_14"
+            app:layout_constraintBottom_toBottomOf="@id/linearLayoutShare"
+            app:layout_constraintEnd_toEndOf="@id/linearLayoutShare"
+            app:layout_constraintTop_toTopOf="@id/linearLayoutShare" />
+
+        <FrameLayout
+            android:id="@+id/frameLayoutShare"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/dp_108"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/linearLayoutShare" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
